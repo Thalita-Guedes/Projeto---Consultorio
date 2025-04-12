@@ -4,5 +4,8 @@
         "twxs.cmake",
         "ms-vscode.cmake-tools",
         "ms-vscode.cpptools-extension-pack"
-    ]
+    ],
+    "files.associations": {
+        "pessoa.h": "c"
+    }
 }

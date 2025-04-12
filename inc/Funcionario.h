@@ -1,31 +1,39 @@
-#ifndef _FUNCIONARIO_H_INCLUED_
-#define _FUNCIONARIO_H_INCLUED_
+#ifndef _FUNCIONARIO_H_INCLUDED_
+#define _FUNCIONARIO_H_INCLUDED_
 
 /** Headers com definições necessarias */
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "inc/Pessoa.h"
+#include "Pessoa.h"
 
 /** Tipos de dados */
-struct Funcionario {
-    struct Pessoa pessoa;
-    char codigo[32];
+
+enum Cargo {
+    Medico,
+    Recepcionista,
+    Faxineira,
+    Guarda,
 };
 
 enum Especialidade {
     ClinicoGeral,
-    Ordopedista,
+    Ortopedista,
+    Cardiologista,
+    Pediatra,
+    dermatologista,
 };
 
 struct Medico {
-    struct Funcionario funcionario;
     char crm[32];
     enum Especialidade especialidade;
 };
 
-struct Recepcionista {
-    struct Funcionario funcionario;
+struct Funcionario {
+    struct Pessoa pessoa;
+    char codigo[32];
+    enum Cargo cargo;
+    struct Medico medico; 
 };
 
 #endif /** !_FUNCIONARIO_H_INCLUED_ */

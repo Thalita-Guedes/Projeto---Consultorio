@@ -1,5 +1,5 @@
-#ifndef _PESSOA_H_INCLUED_
-#define _PESSOA_H_INCLUED_
+#ifndef _PESSOA_H_INCLUDED_
+#define _PESSOA_H_INCLUDED_
 
 /** Headers com definições necessarias */
 #include <stdio.h>
@@ -16,8 +16,8 @@ enum Genero {
 struct Pessoa {
     char nome[100];
     int8_t idade;
-    int8_t altura;
-    int16_t peso;
+    float altura;
+    float peso;
     char rg[20];
     char cpf[20];
     char endereco[100];
@@ -25,4 +25,5 @@ struct Pessoa {
     char email[100];
     enum Genero genero;
 };
-#endif /** !_PESSOA_H_INCLUED_ */
+
+#endif /** !_PESSOA_H_INCLUDED_ */

@@ -3,7 +3,7 @@ CFLAGS	= -I. -Iinc -g
 SRC		= $(wildcard src/*.c)
 OBJDIR	= build/obj
 BINDIR	= build
-OBJ		= $(patsubst stc/%.c, $(OBJDIR)/%.o, $(SRC))
+OBJ		= $(patsubst src/%.c, $(OBJDIR)/%.o, $(SRC))
 TARGET	= $(BINDIR)/app
 
 exec: $(TARGET)
