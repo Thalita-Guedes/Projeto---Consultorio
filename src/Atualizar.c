@@ -1,3 +1,4 @@
+#if 0
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -197,3 +198,4 @@ void AtualizarFuncionario(void){
         }
     }    
 
+# endif

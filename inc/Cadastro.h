@@ -6,6 +6,19 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+enum Tipo {
+    texto,
+    numeroInteiro,
+    numeroDecimal,  
+};
+
+struct Opcoes{
+    enum Tipo tipo;
+    char* pergunta;
+    void* resposta;
+    int tamanho;
+};
+
 /** Funções */
 void CadastraPaciente(void);
 void CadastraFuncionario(void);
@@ -15,6 +28,8 @@ void AtualizarPaciente(void);
 void AtualizarFuncionario(void);
 void DeletarPaciente(void);
 void DeletarFuncionario(void);
+void ExibirTodosPacientes(void);
+void ExibirTodosFuncionarios(void);
 
 
 #endif /** !_CADASTRO_H_INCLUED_ */

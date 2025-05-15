@@ -21,6 +21,6 @@ $(OBJDIR)/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(BINDIR)
+	rm -rf $(BINDIR) $(OBJDIR)
 
 .PHONY: all clean exec

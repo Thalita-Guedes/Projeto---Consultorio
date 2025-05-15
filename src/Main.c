@@ -42,57 +42,89 @@ int main (void)
         printf("==================================================\n");
 
         printf("Selecione uma opcao:\n");
-        printf("  1) Cadastrar paciente\n");
-        printf("  2) Cadastrar funcionario\n");
-        printf("  3) Consultar paciente\n");
-        printf("  4) Consultar funcionario\n");
-        printf("  5) Atualizar paciente\n");
-        printf("  6) Atualizar funcionario\n");
-        printf("  7) Deletar paciente\n");
-        printf("  8) Deletar funcionario\n");
+        printf("  0) Cadastrar paciente\n");
+        printf("  1) Cadastrar funcionario\n");
+        printf("  2) Consultar paciente\n");
+        printf("  3) Consultar funcionario\n");
+        printf("  4) Atualizar paciente\n");
+        printf("  5) Atualizar funcionario\n");
+        printf("  6) Deletar paciente\n");
+        printf("  7) Deletar funcionario\n");
+        printf("  8) Exibir Todos os cadastros de Paciente\n");
+        printf("  9) Exibir Todos os cadastros de funcionario\n");
         printf("  x) Sair\n");
 
         int opcaoSelecionada = MyGetChar();//chama a funçao myGetChar que lê um único caractere digitado pelo usuário e remove o \n (ENTER).
         printf("Você escolheu a opção: %c\n", opcaoSelecionada);
 
         switch(opcaoSelecionada){ // verifica a opção digitada pelo usuário e chama a função correspondente
-            case '1':
+            case '0':
                 printf("Opcao selecionada foi 'Cadastrar paciente'\n");
                 CadastraPaciente();
+                printf("\n Digite c para voltar ao menu...");// Pausa antes de voltar ao menu
+                getchar(); // Aguarda o usuário apertar ENTER
                 break;
-            case '2':
+            case '1':
                 printf("Opcao selecionada foi 'Cadastrar funcionário'\n");
                 CadastraFuncionario();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
-            case '3':
+            case '2':
                 printf("Opcao selecionada foi 'Consultar paciente'\n");
                 ConsultarPaciente();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
-            case '4':
+            case '3':
                 printf("Opcao selecionada foi 'Consultar funcionário'\n");
                 ConsultarFuncionario();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
-            case '5':
+            case '4':
                 printf("Opcao selecionada foi 'Atualizar paciente'\n");
                 AtualizarPaciente();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
-            case '6':
+            case '5':
                 printf("Opcao selecionada foi 'Atualizar funcionário'\n");
                 AtualizarFuncionario();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
-            case '7':
+            case '6':
                 printf("Opcao selecionada foi 'Deletar paciente'\n");
                 DeletarPaciente();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
-            case '8':
+            case '7':
                 printf("Opcao selecionada foi 'Deletar funcionário'\n");
                 DeletarFuncionario();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
+                break;
+            case '8':
+                printf("Opcao selecionada foi 'Exibir todos os cadastros de pacientes'\n");
+                ExibirTodosPacientes();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
+                break;
+            case '9':
+                printf("Opcao selecionada foi 'Exibir todos os cadastros de funcionários'\n");
+                ExibirTodosFuncionarios();
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
             case 'x':
             case 'X':
                 return 0;
             default:
                 printf("Opcao invalida\n");
+                printf("\nPressione ENTER para voltar ao menu...");
+                getchar();
                 break;
         }
     }

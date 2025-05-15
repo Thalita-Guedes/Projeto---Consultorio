@@ -1,3 +1,4 @@
+#if 0
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -96,3 +97,4 @@ void ConsultarFuncionario(void){
     fclose(arquivo);
 
 }
+#endif
